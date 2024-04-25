@@ -99,16 +99,11 @@ public class Contact implements Serializable {
     public int hashCode() {
         return Objects.hash(getName(), getLastName(), getPhone(), getEmail(), getAddress(), getDescription());
     }
-    // сериализация объекта типа Contact в файл с помощью класса ObjectOutputStream.
+
     public  static void serializeContact(Contact contact, String fileName) throws IOException {
-        // Объявление метода serializeContact, который принимает два параметра: объект типа Contact,
-        // который мы хотим сериализовать, и строковое имя файла, в который мы хотим сохранить сериализованный объект.
         ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(fileName));
-        // Создание объекта ObjectOutputStream, который используется для записи объектов Java в поток вывода.
-        // Мы передаем ему поток вывода файла (FileOutputStream), указывая имя файла fileName,
-        // который будет использоваться для сохранения данных.
-        outputStream.writeObject(contact); // Метод writeObject сериализует объект и записывает его в поток.
-        // После этого объект будет сохранен в файле, указанном в fileName.
+
+        outputStream.writeObject(contact);
     }
     public static Contact desiarializeContact(String fileName){
         try (

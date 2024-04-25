@@ -14,7 +14,6 @@ public class PropertiesWriterXML {
 
     public void setProperty(String key, String value, boolean clearFile) {
         if (!clearFile) {
-            // Загружаем существующие свойства из файла, если флаг clearFile установлен в false
             try (FileInputStream inputStream = new FileInputStream(filePath)) {
                 properties.loadFromXML(inputStream);
             } catch (IOException e) {
@@ -22,10 +21,10 @@ public class PropertiesWriterXML {
             }
         }
 
-        // Устанавливаем или обновляем свойство
+
         properties.setProperty(key, value);
 
-        // Сохраняем свойства в файл
+
         try (FileOutputStream outputStream = new FileOutputStream(filePath)) {
             properties.storeToXML(outputStream, null);
         } catch (IOException e) {

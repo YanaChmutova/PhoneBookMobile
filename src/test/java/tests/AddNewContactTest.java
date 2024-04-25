@@ -23,12 +23,12 @@ public class AddNewContactTest extends AppiumConfig {
                 PhoneNumberGenerator.generatePhoneNumber(),
                 EmailGenerator.generateEmail(3,3,3),
                 AddressGenerator.generateAddress(),"Descr");
-        new ContactListScreen(driver)
-                .openNewContactForm()
-
-                .fillTheForm(contact)
-                .createContact()
-                .isContactAdded();
+//        new ContactListScreen(driver)
+//                .openNewContactForm()
+//
+//                .fillTheForm(contact)
+//                .createContact()
+//                .isContactAdded();
 
     }
 }

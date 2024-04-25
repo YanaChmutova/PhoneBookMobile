@@ -5,7 +5,7 @@ import java.util.Random;
 public class PhoneNumberGenerator {
 //    public static void main(String[] args) {
 //        System.out.println("NUMBER: " +generatePhoneNumber());
-//    } проверка на работоспособность
+//    }
     private static final int MIN_LENGTH = 10;
     private static final int MAX_LENGTH = 15;
 
