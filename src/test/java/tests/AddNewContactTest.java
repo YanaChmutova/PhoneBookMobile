@@ -30,4 +30,5 @@ public class AddNewContactTest extends AppiumConfig {
                 .createContact()
                 .isContactAdded(contact));
     }
+
 }
